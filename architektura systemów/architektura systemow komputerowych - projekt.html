@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="PL-pl">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="ask_project-style.css" />
+	<title>rodzina procesorów INTEL x8086 rozkaz MOV</title>
+	<script src="ask_project-script.js"></script>
+</head>
+
+<body>
+	<div class="wrapper">
+		<h1>rodzina procesorów INTEL x8086</h1>
+		<h2> rozkaz MOV</h2>
+		<h3>przeznaczony do przesyłania słów lub bajtów w operacjach typu rejestr-pamięć z (do) dowolnych rejestrów. Rozkaz ten może też przesyłać do pamięci dane określone w trybie prostym bez pośrednictwa rejestru.</h3>
+		<div class="form">
+			<form name="form">
+				<!--- AX --->
+				<div>
+					<label>AX</label>
+					<input type="text" name="AX" id="ax">
+				</div>
+				<!--- BX --->
+				<div>
+					<label>BX</label>
+					<input type="text" name="BX" id="bx">
+				</div>
+				<!--- CX --->
+				<div>
+					<label>CX</label>
+					<input type="text" name="CX" id="cx">
+				</div>
+				<!--- DX --->
+				<div>
+					<label>DX</label>
+					<input type="text" name="DX" id="dx">
+				</div>
+				<!--- rejestr żródłowy --->
+				<div>
+					<p class="label">wybierz rejestr źródłowy (z wartością do przesłania):<br/></p>
+					<select id="rejestr_zrodlowy">
+						<option value="AX">AX</option>
+						<option value="BX">BX</option>
+						<option value="CX">CX</option>
+						<option value="DX">DX</option>
+					</select>
+				</div>
+				<!--- rejestr docelowy --->
+				<div>
+					<p class="label ">wybierz docelowy rejestr docelowy (do którego wartość ma dotrzeć):</p>
+					<select id="rejestr_docelowy">
+						<option value="AX">AX</option>
+						<option value="BX">BX</option>
+						<option value="CX">CX</option>
+						<option value="DX">DX</option>
+					</select>
+				</div>
+				<!--- wyświetlenie wyniku działania skryptu --->
+				<div>
+					<p id="wynik"></p>
+				</div>
+				<!--- "guzik " wysyłający --->
+				<div>
+					<input type="submit" name="wyslij" id="wyslij" value="WYŚLIJ" onclick="mov(); return false;">
+				</div>
+
+			</form>
+
+		</div>
+	</div>
+
+</body>
+</html>
